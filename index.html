@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#container{
+		width: 600px;
+		height: 600px;
+	}
+	div{
+		display: inline;
+	}
+		#number1{
+		position: absolute;
+top: -400px;
+left: 30px;
+			background: url("1.jpg");
+			width: 300px;
+			height: 300px;
+			background-repeat: no-repeat;
+		}
+		#number2{
+			position: absolute;
+		left: 300px;
+top: -300px;
+			background: url("2.jpg");
+			width: 300px;
+			height: 300px;
+			background-repeat: no-repeat;
+		}
+		#number3{
+		position: absolute;
+			left: 600px;
+			top: -600px;
+			background: url("3.jpg");
+			width: 300px;
+			height: 300px;
+			background-repeat: no-repeat;
+		}
+		#number4{
+		position: absolute;
+			left: 900px;
+			top: -500px;
+			background: url("4.jpg");
+			width: 300px;
+			height: 300px;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+<div id="number1"></div>
+<div id="number2"></div>
+<div id="number3"></div>
+<div id="number4"></div>
+</div>
+<button onclick="start()" name="Start">Check</button>
+<input type="number" name="Check Lotto Numbers" id="first">
+<input type="number" name="Check Lotto Numbers" id="second">
+<input type="number" name="Check Lotto Numbers" id="third">
+<input type="number" name="Check Lotto Numbers" id="fourth">
+
+<script type="text/javascript">
+	var start2;
+function animate() {
+	
+		var num1 = document.getElementById('number1')
+		num1.style.top = (num1.offsetTop += 1) + "px";
+
+		var num2 = document.getElementById('number2')
+		num2.style.top = (num2.offsetTop += 2) + "px";
+
+		var num3 = document.getElementById('number3')
+		num3.style.top = (num3.offsetTop += 1) + "px";
+
+		var num4 = document.getElementById('number4')
+		num4.style.top = (num4.offsetTop += 1) + "px";
+
+		if (document.getElementById('number1').style.top >= 400)
+			{
+				clearInterval(start2);
+			}
+	
+}
+
+function start(){
+	var start2 = setInterval(animate, 50)
+}
+
+// var first[0] = document.getElementById('first').value;
+// var first[1] = document.getElementById('second').value;
+// var first[2] = document.getElementById('third').value;
+// var first[3] = document.getElementById('fourth').value;
+</script>
+</body>
+</html>
